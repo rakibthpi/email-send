@@ -1,0 +1,61 @@
+body{
+	margin: 0;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: ;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+	padding: 0;
+	margin: 0;
+}
+p{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+
+/*   -----------------   Defolt Css area End    -----------------   */
+
+/*  -----------------   Header Main Menu area start   -----------------   */
+.header_main_area{
+	background-color: #3498db;
+	padding: 10px 0;
+}
+.header_main_text_area {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* Header logo area start  */
+.header_logo_area h1 a{
+	color: #fff;
+	font-size: 30px;
+	display: inline-block;
+}
+
+/* Header menu area start  */
+.header_menu_area ul {
+	display: flex;
+	align-items: center;
+}
+.header_menu_area ul li a{
+	display: inline-block;
+	padding: 7px 25px;
+	color: #fff;
+	font-size: 16px;
+	text-transform: uppercase;
+	transition: .4s;
+	border-radius: 4px;
+}
+.header_menu_area ul li a:hover{
+	color: #3498db;
+	background-color: #fff;
+}
+/*  -----------------   Header Main Menu area End   -----------------   */
