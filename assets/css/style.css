@@ -180,13 +180,16 @@ h3{
 /*   ========================================   */
 /*   =========   Contact Page Start  ========   */
 /*   ========================================   */
-
+.contact_main_area{
+	margin: 50px 0;
+}
 .single_input_form {
 	background: #3498db;
 	padding: 30px 15px;
 	border-radius: 5px;
-	margin: 50px 0;
+	
 }
+
 .single_input_form input {
 	margin: 10px 0;
 }
