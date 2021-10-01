@@ -38,14 +38,24 @@
 				$error = 'Message is Requerd!';
 			}
 			else{
-				$success = 'Message Send succssful!';
-
+				
 				$to = "rakibhosen2244@gmail.com";
 				$subject = "My subject";
-				$txt = "Hello world!";
-				$headers = "From: webmaster@example.com" . "\r\n";
 
-				mail($to,$subject,$txt,$headers);
+				$txt = "Name :".$name."\r\n".
+				       "Phone :".$phone."\r\n".
+						"Email :".$email."\r\n".
+						"Roll :".$roll."\r\n".
+						"Register :".$reg."\r\n".
+						"Thank you so much!!";
+
+
+				// $headers = "From: ".$email;
+
+				$cmail = mail($to,$subject,$txt,'Header');
+
+				// if($cmail == true){
+				$success = 'Message Send succssful!';
 
 				unset($_REQUEST['name']);
 				unset($_REQUEST['phone']);
@@ -53,6 +63,9 @@
 				unset($_REQUEST['roll']);
 				unset($_REQUEST['reg']);
 				unset($_REQUEST['message']);
+				// }
+
+				
 			}
 
 		}
