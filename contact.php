@@ -6,6 +6,7 @@
 			$email = $_REQUEST['email'];
 			$roll = $_REQUEST['roll'];
 			$reg = $_REQUEST['reg'];
+			$subject = $_REQUEST['sub'];
 			$message = $_REQUEST['message'];
 			if(empty($name)){
 				$error = 'Name is Required!';
@@ -34,13 +35,15 @@
 			else if(!is_numeric($reg)){
 				$error = 'Register Must be Number!';
 			}
+			else if(empty($subject)){
+				$error = 'Subject is Requerd!';
+			}
 			else if(empty($message)){
 				$error = 'Message is Requerd!';
 			}
 			else{
 				
 				$to = "rakibhosen2244@gmail.com";
-				$subject = "My subject";
 
 				$txt = "Name :".$name."\r\n".
 				       "Phone :".$phone."\r\n".
@@ -62,6 +65,7 @@
 				unset($_REQUEST['email']);
 				unset($_REQUEST['roll']);
 				unset($_REQUEST['reg']);
+				unset($_REQUEST['sub']);
 				unset($_REQUEST['message']);
 				// }
 
@@ -117,6 +121,10 @@
 									<input type="text" name="reg" placeholder="Register" class="form-control"
 									value="<?php if(isset($_REQUEST['reg'])){
 										echo $_REQUEST['reg'];} 
+									?>">
+									<input type="text" name="sub" placeholder="Subject" class="form-control"
+									value="<?php if(isset($_REQUEST['sub'])){
+										echo $_REQUEST['sub'];} 
 									?>">
 									<textarea name="message" placeholder="Message" class="form-control"
 									value="<?php if(isset($_REQUEST['message'])){
