@@ -17,9 +17,6 @@
 			else if(!is_numeric($phone)){
 				$error = 'Phone must be number!';
 			}
-			// else if(!$phone == 11){
-			// 	$error = 'Phone is Requerd!';
-			// }
 			else if(empty($email)){
 				$error = 'Email is Requerd!';
 			}
@@ -42,8 +39,8 @@
 				$error = 'Message is Requerd!';
 			}
 			else{
-				
-				$to = "rakibhosen2244@gmail.com";
+												
+				$to = "rakibhosen2244@gmail.com","rakibhosen92468@gmail.com";
 
 				$txt = "Name :".$name."\r\n".
 				       "Phone :".$phone."\r\n".
@@ -53,11 +50,10 @@
 						"Thank you so much!!";
 
 
-				// $headers = "From: ".$email;
+				$headers = "Welcome ".$email;
 
-				$cmail = mail($to,$subject,$txt,'Header');
+				$cmail = mail($to,$subject,$txt,$headers);
 
-				// if($cmail == true){
 				$success = 'Message Send succssful!';
 
 				unset($_REQUEST['name']);
@@ -67,7 +63,6 @@
 				unset($_REQUEST['reg']);
 				unset($_REQUEST['sub']);
 				unset($_REQUEST['message']);
-				// }
 
 				
 			}
